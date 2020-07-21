@@ -11,7 +11,7 @@ https://docs.djangoproject.com/en/2.1/ref/settings/
 """
 from django.contrib import staticfiles
 import os
-
+import django_heroku
 
 
 
@@ -145,3 +145,4 @@ AWS_DEFAULT_ACL = None
 
 DEFAULT_FILE_STORAGE = 'storages.backends.s3boto3.S3Boto3Storage'
 
+django_heroku.settings(locals())
